@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 8080;
 // sets up the express app to handle data parcing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use(express.static("public"))
 
 // note taker container
 
@@ -25,11 +25,11 @@ const notesArr = []
 
 // html routes
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, "note.html"))
+  res.sendFile(path.join(__dirname, "./public/index.html"))
 })
 
 app.get('/notes', function (req, res) {
-  res.sendFile(path.join(__dirname, "index.html"))
+  res.sendFile(path.join(__dirname, "./public/note.html"))
 
 })
 
