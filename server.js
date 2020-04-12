@@ -50,7 +50,7 @@ app.get('/api/notes', function (req, res) {
 
 // the post adds new note  to the list 
 app.post('/api/notes', function (req, res) {
-  const newNote = saveNewNote(req.body)
+  const newNote = notesArr(req.body)
 
   return res.json(newNote)
 })
@@ -78,7 +78,7 @@ function retrieveNotes() {
         title: element.text,
         text: element.id
       }
-      notesarr.push(newNote)
+      notesArr.push(newNote)
     })
 
 
