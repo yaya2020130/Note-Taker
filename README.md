@@ -1,4 +1,7 @@
 # Note-Taker
 ---
 ## I have done the following things
-* prepare the documents
+* Added codes from the bakend in the server folder
+* Understand how the code is connected with the   js folder
+
+
